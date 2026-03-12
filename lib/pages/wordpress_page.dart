@@ -3,6 +3,8 @@ import '../services/wordpress_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WordpressPage extends StatefulWidget {
+  const WordpressPage({super.key});
+
   @override
   State<WordpressPage> createState() => _WordpressPageState();
 }
@@ -17,7 +19,7 @@ class _WordpressPageState extends State<WordpressPage> {
     super.initState();
   }
 
-  cargar() async {
+  Future<void> cargar() async {
 
     final data = await WordpressService.getPosts();
 
@@ -27,7 +29,8 @@ class _WordpressPageState extends State<WordpressPage> {
 
   }
 
-  abrir(url) async {
+  // ignore: strict_top_level_inference
+  Future<void> abrir(url) async {
 
     final uri = Uri.parse(url);
 

@@ -9,6 +9,8 @@ import 'wordpress_page.dart';
 import 'about_page.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   Widget boton(BuildContext context, String texto, Widget page) {
     return Padding(
       padding: EdgeInsets.all(10),

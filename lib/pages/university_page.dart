@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../services/university_service.dart';
 
 class UniversityPage extends StatefulWidget {
+  const UniversityPage({super.key});
+
   @override
   State<UniversityPage> createState() => _UniversityPageState();
 }
@@ -11,7 +13,7 @@ class _UniversityPageState extends State<UniversityPage> {
   TextEditingController controller = TextEditingController();
   List universidades = [];
 
-  buscar() async {
+  Future<void> buscar() async {
 
     final result = await UniversityService.getUniversities(controller.text);
 

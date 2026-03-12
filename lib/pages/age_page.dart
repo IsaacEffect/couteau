@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../services/age_service.dart';
 
 class AgePage extends StatefulWidget {
+  const AgePage({super.key});
+
   @override
   State<AgePage> createState() => _AgePageState();
 }
@@ -11,7 +13,7 @@ class _AgePageState extends State<AgePage> {
   TextEditingController controller = TextEditingController();
   int? age;
 
-  buscar() async {
+  Future<void> buscar() async {
 
     final result = await AgeService.getAge(controller.text);
 

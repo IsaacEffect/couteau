@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../services/gender_service.dart';
 
 class GenderPage extends StatefulWidget {
+  const GenderPage({super.key});
+
   @override
   State<GenderPage> createState() => _GenderPageState();
 }
@@ -11,7 +13,7 @@ class _GenderPageState extends State<GenderPage> {
   TextEditingController controller = TextEditingController();
   String? gender;
 
-  buscar() async {
+  Future<void> buscar() async {
 
     final result = await GenderService.getGender(controller.text);
 

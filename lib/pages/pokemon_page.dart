@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../services/pokemon_service.dart';
 
 class PokemonPage extends StatefulWidget {
+  const PokemonPage({super.key});
+
   @override
   State<PokemonPage> createState() => _PokemonPageState();
 }
@@ -13,7 +15,7 @@ class _PokemonPageState extends State<PokemonPage> {
   String? image;
   int? exp;
 
-  buscar() async {
+  Future<void> buscar() async {
 
     final data = await PokemonService.getPokemon(controller.text);
 

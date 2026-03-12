@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../services/weather_service.dart';
 
 class WeatherPage extends StatefulWidget {
+  const WeatherPage({super.key});
+
   @override
   State<WeatherPage> createState() => _WeatherPageState();
 }
@@ -17,7 +19,7 @@ class _WeatherPageState extends State<WeatherPage> {
     super.initState();
   }
 
-  cargarClima() async {
+  Future<void> cargarClima() async {
 
     final data = await WeatherService.getWeather();
 
