@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 class WeatherService {
 
-  static const apiKey = "1362e8ebdf8f4a31ad1b5127ea90a5fb";
+  static const apiKey = "aca va toquen su api key de openweathermap";
 
   static Future<Map> getWeather() async {
 
